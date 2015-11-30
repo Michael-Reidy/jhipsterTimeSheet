@@ -1,11 +1,11 @@
 <div>
-    <h2 translate="employeeRecordsApp.sheet.home.title">Sheets</h2>
+    <h2 translate="employeeRecordsApp.employee.home.title">Employees</h2>
     <jh-alert></jh-alert>
     <div class="container">
         <div class="row">
             <div class="col-md-4">
-                <button class="btn btn-primary" ui-sref="sheet.new">
-                    <span class="glyphicon glyphicon-flash"></span> <span translate="employeeRecordsApp.sheet.home.createLabel">Create a new Sheet</span>
+                <button class="btn btn-primary" ui-sref="employee.new">
+                    <span class="glyphicon glyphicon-flash"></span> <span translate="employeeRecordsApp.employee.home.createLabel">Create a new Employee</span>
                 </button>
             </div>
         </div>
@@ -16,33 +16,33 @@
             <thead>
                 <tr>
                     <th translate="global.field.id">ID</th>
-                    <th translate="employeeRecordsApp.sheet.projectname">Projectname</th>
-                    <th translate="employeeRecordsApp.sheet.weekending">Weekending</th>
-                    <th translate="employeeRecordsApp.sheet.employee">employee</th>
+                    <th translate="employeeRecordsApp.employee.first">First</th>
+                    <th translate="employeeRecordsApp.employee.last">Last</th>
+                    <th translate="employeeRecordsApp.employee.employeeId">EmployeeId</th>
+                    <th translate="employeeRecordsApp.employee.type">Type</th>
                     <th></th>
                 </tr>
             </thead>
             <tbody>
-                <tr ng-repeat="sheet in sheets track by sheet.id">
-                    <td><a ui-sref="sheet.detail({id:sheet.id})">{{sheet.id}}</a></td>
-                    <td>{{sheet.projectname}}</td>
-                    <td>{{sheet.weekending | date:'medium'}}</td>
-                    <td>
-                        <a ui-sref="Employee.detail({id:sheet.employee.id})">{{sheet.employee.id}}</a>
-                    </td>
+                <tr ng-repeat="employee in employees track by employee.id">
+                    <td><a ui-sref="employee.detail({id:employee.id})">{{employee.id}}</a></td>
+                    <td>{{employee.first}}</td>
+                    <td>{{employee.last}}</td>
+                    <td>{{employee.employeeId}}</td>
+                    <td translate="{{'employeeRecordsApp.EmployeeType.' + employee.type}}">{{employee.type}}</td>
                     <td>
                         <button type="submit"
-                                ui-sref="sheet.detail({id:sheet.id})"
+                                ui-sref="employee.detail({id:employee.id})"
                                 class="btn btn-info btn-sm">
                             <span class="glyphicon glyphicon-eye-open"></span>&nbsp;<span translate="entity.action.view"> View</span>
                         </button>
                         <button type="submit"
-                                ui-sref="sheet.edit({id:sheet.id})"
+                                ui-sref="employee.edit({id:employee.id})"
                                 class="btn btn-primary btn-sm">
                             <span class="glyphicon glyphicon-pencil"></span>&nbsp;<span translate="entity.action.edit"> Edit</span>
                         </button>
                         <button type="submit"
-                                ui-sref="sheet.delete({id:sheet.id})"
+                                ui-sref="employee.delete({id:employee.id})"
                                 class="btn btn-danger btn-sm">
                             <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;<span translate="entity.action.delete"> Delete</span>
                         </button>

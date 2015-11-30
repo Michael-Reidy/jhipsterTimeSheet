@@ -6,6 +6,13 @@
             "otherEntityName": "lineItem",
             "relationshipType": "one-to-many",
             "otherEntityRelationshipName": "sheet"
+        },
+		{
+            "relationshipId": 2,
+            "relationshipName": "employee",
+            "otherEntityName": "Employee",
+            "relationshipType": "many-to-one",
+            "otherEntityRelationshipName": "sheets"
         }
     ],
     "fields": [

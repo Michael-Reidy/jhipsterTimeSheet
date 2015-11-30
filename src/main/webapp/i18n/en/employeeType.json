@@ -1,0 +1,10 @@
+{
+    "employeeRecordsApp": {
+        "EmployeeType" : {
+            "null": "",
+            "full": "full",
+            "contract": "contract",
+            "intern": "intern"
+        }
+    }
+}

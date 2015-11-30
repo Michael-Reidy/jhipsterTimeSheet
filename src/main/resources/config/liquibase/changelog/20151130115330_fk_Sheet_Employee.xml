@@ -14,20 +14,15 @@
     <property name="floatType" value="float" dbms="mysql, oracle"/>
 
     <!--
-        Added the entity Sheet.
+        Added the entity LineItem.
     -->
-    <changeSet id="20151130102927" author="jhipster">
-        <createTable tableName="sheet">
-            <column name="id" type="bigint" autoIncrement="${autoIncrement}">
-                <constraints primaryKey="true" nullable="false"/>
-            </column>
-            <column name="projectname" type="varchar(255)"/>
-            <column name="weekending" type="timestamp">
-                <constraints nullable="false" />
-            </column>
-            <column name="employee_id" type="bigint"/>
-        </createTable>
-        <dropDefaultValue tableName="sheet" columnName="weekending" columnDataType="datetime"/>
+    <changeSet id="20151130115330" author="mreidy">
+           <addForeignKeyConstraint baseColumnNames="employee_id"
+                                 baseTableName="sheet"
+                                 constraintName="fk_sheet_employee_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="employee"/>
+
 
     </changeSet>
 </databaseChangeLog>

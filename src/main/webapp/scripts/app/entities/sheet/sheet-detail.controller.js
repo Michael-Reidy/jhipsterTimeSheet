@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('employeeRecordsApp')
-    .controller('SheetDetailController', function ($scope, $rootScope, $stateParams, entity, Sheet, LineItem) {
+    .controller('SheetDetailController', function ($scope, $rootScope, $stateParams, entity, Sheet, LineItem, Employee) {
         $scope.sheet = entity;
         $scope.load = function (id) {
             Sheet.get({id: id}, function(result) {

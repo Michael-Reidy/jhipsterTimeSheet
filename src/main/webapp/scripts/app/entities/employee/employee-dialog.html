@@ -1,0 +1,76 @@
+
+<form name="editForm" role="form" novalidate ng-submit="save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="clear()">&times;</button>
+        <h4 class="modal-title" id="myEmployeeLabel" translate="employeeRecordsApp.employee.home.createOrEditLabel">Create or edit a Employee</h4>
+    </div>
+    <div class="modal-body">
+        <jh-alert-error></jh-alert-error>
+        <div class="form-group">
+            <label for="id" translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="employee.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="employeeRecordsApp.employee.first" for="field_first">First</label>
+            <input type="text" class="form-control" name="first" id="field_first"
+                    ng-model="employee.first"
+                    required />
+            <div ng-show="editForm.first.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.first.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="employeeRecordsApp.employee.last" for="field_last">Last</label>
+            <input type="text" class="form-control" name="last" id="field_last"
+                    ng-model="employee.last"
+                    required />
+            <div ng-show="editForm.last.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.last.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="employeeRecordsApp.employee.employeeId" for="field_employeeId">EmployeeId</label>
+            <input type="text" class="form-control" name="employeeId" id="field_employeeId"
+                    ng-model="employee.employeeId"
+                    required />
+            <div ng-show="editForm.employeeId.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.employeeId.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="employeeRecordsApp.employee.type" for="field_type">Type</label>
+            <select class="form-control" name="type" ng-model="employee.type" id="field_type" required>
+                <option value="full" translate="employeeRecordsApp.EmployeeType.full">full</option>
+                <option value="contract" translate="employeeRecordsApp.EmployeeType.contract">contract</option>
+                <option value="intern" translate="employeeRecordsApp.EmployeeType.intern">intern</option>
+            </select>
+            <div ng-show="editForm.type.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.type.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

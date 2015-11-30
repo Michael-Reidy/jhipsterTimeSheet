@@ -1,6 +1,6 @@
 
 <div>
-    <h2><span translate="employeeRecordsApp.sheet.detail.title">Sheet</span> {{sheet.id}}</h2>
+    <h2><span translate="employeeRecordsApp.employee.detail.title">Employee</span> {{employee.id}}</h2>
     <div class="table-responsive">
         <table class="table table-striped">
             <thead>
@@ -12,26 +12,34 @@
             <tbody>
             <tr>
                 <td>
-                    <span translate="employeeRecordsApp.sheet.projectname">Projectname</span>
+                    <span translate="employeeRecordsApp.employee.first">First</span>
                 </td>
                 <td>
-                    <span class="form-control-static">{{sheet.projectname}}</span>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <span translate="employeeRecordsApp.sheet.weekending">Weekending</span>
-                </td>
-                <td>
-                    <span class="form-control-static">{{sheet.weekending | date:'medium'}}</span>
+                    <span class="form-control-static">{{employee.first}}</span>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <span translate="employeeRecordsApp.sheet.employee">employee</span>
+                    <span translate="employeeRecordsApp.employee.last">Last</span>
                 </td>
                 <td>
-                    <a class="form-control-static" ui-sref="Employee.detail({id:sheet.employee.id})">{{sheet.employee.id}}</a>
+                    <span class="form-control-static">{{employee.last}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="employeeRecordsApp.employee.employeeId">EmployeeId</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{employee.employeeId}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="employeeRecordsApp.employee.type">Type</span>
+                </td>
+                <td>
+                    <span class="form-control-static" translate="{{'employeeRecordsApp.EmployeeType.' + employee.type}}">{{employee.type}}</span>
                 </td>
             </tr>
             </tbody>

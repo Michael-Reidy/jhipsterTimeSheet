@@ -37,6 +37,10 @@ public class Sheet implements Serializable {
     @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
     private Set<LineItem> lineitemss = new HashSet<>();
 
+    @ManyToOne
+    @JoinColumn(name = "employee_id")
+    private Employee employee;
+
     public Long getId() {
         return id;
     }
@@ -67,6 +71,14 @@ public class Sheet implements Serializable {
 
     public void setLineitemss(Set<LineItem> lineItems) {
         this.lineitemss = lineItems;
+    }
+
+    public Employee getEmployee() {
+        return employee;
+    }
+
+    public void setEmployee(Employee Employee) {
+        this.employee = Employee;
     }
 
     @Override

@@ -14,20 +14,26 @@
     <property name="floatType" value="float" dbms="mysql, oracle"/>
 
     <!--
-        Added the entity Sheet.
+        Added the entity Employee.
     -->
-    <changeSet id="20151130102927" author="jhipster">
-        <createTable tableName="sheet">
+    <changeSet id="20151130115328" author="jhipster">
+        <createTable tableName="employee">
             <column name="id" type="bigint" autoIncrement="${autoIncrement}">
                 <constraints primaryKey="true" nullable="false"/>
             </column>
-            <column name="projectname" type="varchar(255)"/>
-            <column name="weekending" type="timestamp">
+            <column name="first" type="varchar(255)">
                 <constraints nullable="false" />
             </column>
-            <column name="employee_id" type="bigint"/>
+            <column name="last" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+            <column name="employee_id" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+            <column name="type" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
         </createTable>
-        <dropDefaultValue tableName="sheet" columnName="weekending" columnDataType="datetime"/>
-
+        
     </changeSet>
 </databaseChangeLog>

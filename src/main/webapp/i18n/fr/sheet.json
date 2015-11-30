@@ -17,7 +17,8 @@
             },
             "projectname": "Projectname",
             "weekending": "Weekending",
-            "lineitems": "Lineitems"
+            "lineitems": "Lineitems",
+            "employee": "Employee"
         }
     }
 }

@@ -1,11 +1,12 @@
 'use strict';
 
 angular.module('employeeRecordsApp').controller('SheetDialogController',
-    ['$scope', '$stateParams', '$modalInstance', 'entity', 'Sheet', 'LineItem',
-        function($scope, $stateParams, $modalInstance, entity, Sheet, LineItem) {
+    ['$scope', '$stateParams', '$modalInstance', 'entity', 'Sheet', 'LineItem', 'Employee',
+        function($scope, $stateParams, $modalInstance, entity, Sheet, LineItem, Employee) {
 
         $scope.sheet = entity;
         $scope.lineitems = LineItem.query();
+        $scope.employees = Employee.query();
         $scope.load = function(id) {
             Sheet.get({id : id}, function(result) {
                 $scope.sheet = result;
