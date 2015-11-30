@@ -1,0 +1,24 @@
+{
+    "employeeRecordsApp": {
+        "lineItem" : {
+            "home": {
+                "title": "LineItems",
+                "createLabel": "Créer un nouveau LineItem",
+                "createOrEditLabel": "Créer ou éditer un LineItem"
+            },
+            "created": "Un nouveau LineItem a été créé avec l'identifiant {{ param }}",
+            "updated": "Le LineItem avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le LineItem avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le LineItem {{ id }} ?"
+            },
+            "detail": {
+                "title": "LineItem"
+            },
+            "start": "Start",
+            "end": "End",
+            "details": "Details"
+        }
+    }
+}
+
