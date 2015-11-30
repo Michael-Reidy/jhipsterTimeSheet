@@ -1,11 +1,11 @@
 <div>
-    <h2 translate="employeeRecordsApp.lineItem.home.title">LineItems</h2>
+    <h2 translate="employeeRecordsApp.sheet.home.title">Sheets</h2>
     <jh-alert></jh-alert>
     <div class="container">
         <div class="row">
             <div class="col-md-4">
-                <button class="btn btn-primary" ui-sref="lineItem.new">
-                    <span class="glyphicon glyphicon-flash"></span> <span translate="employeeRecordsApp.lineItem.home.createLabel">Create a new LineItem</span>
+                <button class="btn btn-primary" ui-sref="sheet.new">
+                    <span class="glyphicon glyphicon-flash"></span> <span translate="employeeRecordsApp.sheet.home.createLabel">Create a new Sheet</span>
                 </button>
             </div>
         </div>
@@ -16,35 +16,29 @@
             <thead>
                 <tr>
                     <th translate="global.field.id">ID</th>
-                    <th translate="employeeRecordsApp.lineItem.start">Start</th>
-                    <th translate="employeeRecordsApp.lineItem.end">End</th>
-                    <th translate="employeeRecordsApp.lineItem.details">Details</th>
-                    <th translate="employeeRecordsApp.lineItem.sheet">sheet</th>
+                    <th translate="employeeRecordsApp.sheet.projectname">Projectname</th>
+                    <th translate="employeeRecordsApp.sheet.weekending">Weekending</th>
                     <th></th>
                 </tr>
             </thead>
             <tbody>
-                <tr ng-repeat="lineItem in lineItems track by lineItem.id">
-                    <td><a ui-sref="lineItem.detail({id:lineItem.id})">{{lineItem.id}}</a></td>
-                    <td>{{lineItem.start | date:'medium'}}</td>
-                    <td>{{lineItem.end | date:'medium'}}</td>
-                    <td>{{lineItem.details}}</td>
-                    <td>
-                        <a ui-sref="Sheet.detail({id:lineItem.sheet.id})">{{lineItem.sheet.id}}</a>
-                    </td>
+                <tr ng-repeat="sheet in sheets track by sheet.id">
+                    <td><a ui-sref="sheet.detail({id:sheet.id})">{{sheet.id}}</a></td>
+                    <td>{{sheet.projectname}}</td>
+                    <td>{{sheet.weekending | date:'medium'}}</td>
                     <td>
                         <button type="submit"
-                                ui-sref="lineItem.detail({id:lineItem.id})"
+                                ui-sref="sheet.detail({id:sheet.id})"
                                 class="btn btn-info btn-sm">
                             <span class="glyphicon glyphicon-eye-open"></span>&nbsp;<span translate="entity.action.view"> View</span>
                         </button>
                         <button type="submit"
-                                ui-sref="lineItem.edit({id:lineItem.id})"
+                                ui-sref="sheet.edit({id:sheet.id})"
                                 class="btn btn-primary btn-sm">
                             <span class="glyphicon glyphicon-pencil"></span>&nbsp;<span translate="entity.action.edit"> Edit</span>
                         </button>
                         <button type="submit"
-                                ui-sref="lineItem.delete({id:lineItem.id})"
+                                ui-sref="sheet.delete({id:sheet.id})"
                                 class="btn btn-danger btn-sm">
                             <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;<span translate="entity.action.delete"> Delete</span>
                         </button>

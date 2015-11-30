@@ -17,7 +17,8 @@
             },
             "start": "Start",
             "end": "End",
-            "details": "Details"
+            "details": "Details",
+            "sheet": "Sheet"
         }
     }
 }

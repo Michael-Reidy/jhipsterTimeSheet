@@ -7,6 +7,8 @@ import java.time.ZonedDateTime;
 import javax.persistence.*;
 import javax.validation.constraints.*;
 import java.io.Serializable;
+import java.util.HashSet;
+import java.util.Set;
 import java.util.Objects;
 
 /**
@@ -33,6 +35,10 @@ public class LineItem implements Serializable {
     @Size(min = 20)
     @Column(name = "details", nullable = false)
     private String details;
+
+    @ManyToOne
+    @JoinColumn(name = "sheet_id")
+    private Sheet sheet;
 
     public Long getId() {
         return id;
@@ -64,6 +70,14 @@ public class LineItem implements Serializable {
 
     public void setDetails(String details) {
         this.details = details;
+    }
+
+    public Sheet getSheet() {
+        return sheet;
+    }
+
+    public void setSheet(Sheet Sheet) {
+        this.sheet = Sheet;
     }
 
     @Override

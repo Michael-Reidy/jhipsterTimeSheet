@@ -1,34 +1,34 @@
 'use strict';
 
-describe('LineItem Detail Controller', function() {
+describe('Sheet Detail Controller', function() {
     var $scope, $rootScope;
-    var MockEntity, MockLineItem, MockSheet;
+    var MockEntity, MockSheet, MockLineItem;
     var createController;
 
     beforeEach(inject(function($injector) {
         $rootScope = $injector.get('$rootScope');
         $scope = $rootScope.$new();
         MockEntity = jasmine.createSpy('MockEntity');
-        MockLineItem = jasmine.createSpy('MockLineItem');
         MockSheet = jasmine.createSpy('MockSheet');
+        MockLineItem = jasmine.createSpy('MockLineItem');
         
 
         var locals = {
             '$scope': $scope,
             '$rootScope': $rootScope,
             'entity': MockEntity ,
-            'LineItem': MockLineItem,
-            'Sheet': MockSheet
+            'Sheet': MockSheet,
+            'LineItem': MockLineItem
         };
         createController = function() {
-            $injector.get('$controller')("LineItemDetailController", locals);
+            $injector.get('$controller')("SheetDetailController", locals);
         };
     }));
 
 
     describe('Root Scope Listening', function() {
         it('Unregisters root scope listener upon scope destruction', function() {
-            var eventType = 'employeeRecordsApp:lineItemUpdate';
+            var eventType = 'employeeRecordsApp:sheetUpdate';
 
             createController();
             expect($rootScope.$$listenerCount[eventType]).toEqual(1);

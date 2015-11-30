@@ -1,0 +1,33 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "lineitems",
+            "otherEntityName": "lineItem",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "sheet"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "projectname",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "minlength"
+            ],
+            "fieldValidateRulesMinlength": "20"
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "weekending",
+            "fieldType": "ZonedDateTime",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "changelogDate": "20151130102927",
+    "dto": "no",
+    "pagination": "pagination"
+}

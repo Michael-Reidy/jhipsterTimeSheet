@@ -1,0 +1,23 @@
+{
+    "employeeRecordsApp": {
+        "sheet" : {
+            "home": {
+                "title": "Sheets",
+                "createLabel": "Create a new Sheet",
+                "createOrEditLabel": "Create or edit a Sheet"
+            },
+            "created": "A new Sheet is created with identifier {{ param }}",
+            "updated": "A Sheet is updated with identifier {{ param }}",
+            "deleted": "A Sheet is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Sheet {{ id }}?"
+            },
+            "detail": {
+                "title": "Sheet"
+            },
+            "projectname": "Projectname",
+            "weekending": "Weekending",
+            "lineitems": "Lineitems"
+        }
+    }
+}

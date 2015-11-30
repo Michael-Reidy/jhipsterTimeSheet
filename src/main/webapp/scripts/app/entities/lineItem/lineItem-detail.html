@@ -34,6 +34,14 @@
                     <span class="form-control-static">{{lineItem.details}}</span>
                 </td>
             </tr>
+            <tr>
+                <td>
+                    <span translate="employeeRecordsApp.lineItem.sheet">sheet</span>
+                </td>
+                <td>
+                    <a class="form-control-static" ui-sref="Sheet.detail({id:lineItem.sheet.id})">{{lineItem.sheet.id}}</a>
+                </td>
+            </tr>
             </tbody>
         </table>
     </div>

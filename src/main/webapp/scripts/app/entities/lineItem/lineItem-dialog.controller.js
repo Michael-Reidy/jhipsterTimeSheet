@@ -1,10 +1,11 @@
 'use strict';
 
 angular.module('employeeRecordsApp').controller('LineItemDialogController',
-    ['$scope', '$stateParams', '$modalInstance', 'entity', 'LineItem',
-        function($scope, $stateParams, $modalInstance, entity, LineItem) {
+    ['$scope', '$stateParams', '$modalInstance', 'entity', 'LineItem', 'Sheet',
+        function($scope, $stateParams, $modalInstance, entity, LineItem, Sheet) {
 
         $scope.lineItem = entity;
+        $scope.sheets = Sheet.query();
         $scope.load = function(id) {
             LineItem.get({id : id}, function(result) {
                 $scope.lineItem = result;
