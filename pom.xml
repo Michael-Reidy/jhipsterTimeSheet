@@ -9,7 +9,7 @@
         <relativePath/>
     </parent>
 
-    <groupId>com.equiax.employeerecord</groupId>
+    <groupId>com.crowhill.employeerecord</groupId>
     <artifactId>employee-records</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>war</packaging>
@@ -552,7 +552,7 @@
                     <defaultSchemaName>employeeRecords</defaultSchemaName>
                     <username>root</username>
                     <password></password>
-                    <referenceUrl>hibernate:spring:com.equiax.employeerecord.domain?dialect=org.hibernate.dialect.MySQLInnoDBDialect</referenceUrl>
+                    <referenceUrl>hibernate:spring:com.crowhill.employeerecord.domain?dialect=org.hibernate.dialect.MySQLInnoDBDialect</referenceUrl>
                     <verbose>true</verbose>
                     <logging>debug</logging>
                     <diffExcludeObjects>oauth_access_token, oauth_approvals, oauth_client_details, oauth_client_token, oauth_code, oauth_refresh_token</diffExcludeObjects>

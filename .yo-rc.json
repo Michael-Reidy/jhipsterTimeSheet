@@ -1,8 +1,8 @@
 {
   "generator-jhipster": {
     "baseName": "employeeRecords",
-    "packageName": "com.equiax.employeerecord",
-    "packageFolder": "com/equiax/employeerecord",
+    "packageName": "com.crowhill.employeerecord",
+    "packageFolder": "com/crowhill/employeerecord",
     "authenticationType": "oauth2",
     "hibernateCache": "ehcache",
     "clusteredHttpSession": "no",
